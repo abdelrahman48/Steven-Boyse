@@ -1,8 +1,18 @@
+@font-face {
+  font-family: brandon-grotesque;
+  src: url("../fonts/brandon-grotesque-black-58a8a3e824392.otf");
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: 'brandon-grotesque', sans-serif;
+  color: #fff;
 }
 
 .container {
@@ -26,7 +36,7 @@
 }
 
 .container {
-  max-width: 1240px;
+  max-width: 1440px;
 }
 
 .container {
@@ -41,10 +51,60 @@
           flex: 1 0 900px;
   height: 912px;
   background: url("../img/plane-image.png") no-repeat;
+  position: relative;
+}
+
+.img .logo {
+  position: absolute;
+  top: 52px;
+  left: 55px;
+  -webkit-box-shadow: 0 0 11px 5px rgba(255, 255, 255, 0.65);
+          box-shadow: 0 0 11px 5px rgba(255, 255, 255, 0.65);
+}
+
+.img span {
+  position: absolute;
+  bottom: 0;
+  left: 82px;
+  font-size: 27px;
+  display: inline-block;
+  padding: 22px 50px;
+  background-color: #9D43B6;
+  border-radius: 20px 20px 0 0;
 }
 
 .info {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 543px;
           flex: 1 0 543px;
+  background-color: #2E327A;
+  padding: 150px 117px 124px 76px;
+}
+
+.info h1 {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 57.1px;
+  margin-bottom: 41px;
+}
+
+.info h3 {
+  font-size: 30px;
+  line-height: 35.9px;
+  margin-bottom: 40px;
+}
+
+.info p {
+  font-size: 18px;
+  line-height: 25.74px;
+  margin-bottom: 31px;
+}
+
+.info p:last-of-type {
+  margin-bottom: 7px;
+}
+
+.info a {
+  color: #53BAD8;
+  font-size: 25px;
 }
