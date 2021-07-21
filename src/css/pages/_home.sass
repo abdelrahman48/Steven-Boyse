@@ -1,24 +1,30 @@
 .container
   display: flex
+  height: 100vh
+
+.for_info, .for_img
+  position: absolute
+  font-size: 27px
+  display: inline-block
+  padding: 22px
+  background-color: #9D43B6
+  border-radius: 20px 20px 0 0
+  text-align: center
+  width: 394px
 .img
-  flex: 1 0 900px
-  height: 912px
-  background: url("../img/plane-image.png") no-repeat
+  flex: 1 0 897px
+  background: url("../img/plane-image.png") no-repeat center/cover
   position: relative
   .logo
     position: absolute
     top: 52px
     left: 55px
     box-shadow: 0 0 11px 5px rgba(255, 255, 255, 0.65)
-  span
-    position: absolute
+  span.for_img
     bottom: 0
-    left: 82px
-    font-size: 27px
-    display: inline-block
-    padding: 22px 50px
-    background-color: #9D43B6
-    border-radius: 20px 20px 0 0
+    left: 74px
+
+
 .info
   flex: 1 0 543px
   background-color: #2E327A
@@ -30,14 +36,76 @@
     margin-bottom: 41px
   h3
     font-size: 30px
+    font-weight: 700
     line-height: 35.9px
     margin-bottom: 40px
+    max-width: 300px
   p
     font-size: 18px
     line-height: 25.74px
     margin-bottom: 31px
   p:last-of-type
-    margin-bottom: 7px
+    margin-bottom: 9px
+  svg
+    margin-right: 9px
   a
     color: #53BAD8
     font-size: 25px
+  span.for_info
+    bottom: -85px
+    left: -900px
+
+
+
+@media (max-width: 1500px)
+  .img
+    flex: 1 1 897px
+@include maxXlarge
+  .container
+    display: block
+    height: auto
+    max-width: 700px
+    position: relative
+  .img
+    height: 340px
+    position: static
+    .logo
+      width: 250px
+      height: 69px
+      left: 50%
+      top: 31px
+      transform: translateX(-50%)
+    span.for_img
+      display: none
+
+
+  .info
+    padding: 21px 21px 0
+    .text
+      max-width: 287px
+      margin: auto
+      text-align: center
+    h1
+      font-size: 18px
+      font-weight: 400
+      line-height: 47.1px
+      margin-bottom: 0
+    h3
+      font-size: 27px
+      line-height: 31.9px
+      margin-bottom: 24px
+    p
+      line-height: 25.74px
+    p:last-of-type
+      margin-bottom: 13px
+    a
+      font-size: 22px
+    span.for_info
+      position: relative
+      bottom: 0
+      left: -14px
+      display: inline-block
+      padding: 25px
+      font-size: 21px
+      margin-top: 40px
+      width: 316px
